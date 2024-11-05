@@ -32,10 +32,7 @@ export function Projects() {
         <div className="flex w-full flex-wrap justify-center items-center gap-4 max-w-[90%] mx-auto overflow-hidden" id="projects">
             <CardProject/>
             <CardProject/>
-            <CardProject/>
-            <CardProject/>
-            <CardProject/>
-            <CardProject/>
+            
         </div>
       </div>
     </Container>

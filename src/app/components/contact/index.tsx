@@ -1,16 +1,35 @@
+"use client"
 import { Container } from "../container";
 import { ButtonContact } from "./buttonContact";
+import { use, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function Contact() {
-    
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(".contact", {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".contact",
+                start: "top 700px",
+                end: "top 300px",
+                markers: true,
+                scrub: true,
+            },
+        });
+    }, []);
     return(
         <Container>
-            <div className="min-h-[calc(100dvh-5rem)] flex flex-col justify-center items-center gap-12">
-                <h2 className="text-3xl font-bold">Entre em Contato!</h2>
-                <div className="flex gap-4">
-                    <ButtonContact contact="Whatsapp" />
-                    <ButtonContact contact="Email" />
-                    <ButtonContact contact="Linkedin" />
+            <div className="overflow-hidden">
+                <div className="min-h-[calc(100dvh-5rem)] flex flex-col justify-center items-center gap-12 contact translate-x-[-1000px]">
+                    <h2 className="text-3xl font-bold">Entre em Contato!</h2>
+                    <div className="flex gap-4">
+                        <ButtonContact contact="Whatsapp" />
+                        <ButtonContact contact="Email" />
+                        <ButtonContact contact="Linkedin" />
+                    </div>
                 </div>
             </div>
         </Container>
