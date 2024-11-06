@@ -5,6 +5,7 @@ import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import { HiDownload } from "react-icons/hi";
 
 export function Greeting() {
   const [text] = useTypewriter({
@@ -54,9 +55,9 @@ export function Greeting() {
         <a
           download
           href="./curriculo-gustavo.pdf"
-          className="bg-blue-600 hover:bg-blue-600/80 transition-all p-4 rounded-md md:self-start"
+          className="bg-blue-600 hover:bg-blue-600/80 transition-all p-4 rounded-md md:self-start group"
         >
-          Baixar cv
+          Baixar cv <HiDownload size={24} color="white" className="inline-block group-hover:translate-y-2 transition-all" />
         </a>
       </article>
     </Container>

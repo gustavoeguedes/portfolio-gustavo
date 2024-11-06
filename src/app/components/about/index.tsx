@@ -48,7 +48,7 @@ export function About() {
         className="min-h-[calc(100dvh-5rem)] flex flex-col md:flex-row p-4 gap-4 overflow-hidden"
         id="about-section"
       >
-        <div className="w-full md:w-1/2 translate-x-[-1000px] about">
+        <div className="w-full md:w-1/2 opacity-0 translate-x-[-1000px] about">
           <h2 className="text-center text-2xl font-semibold mb-4">Sobre mim</h2>
           <p>
             Sou estagiário na <a href="https://rkms.com.br/" className="underline">RKM Sistemas</a>, com 24 anos e atualmente cursando o
@@ -58,7 +58,7 @@ export function About() {
             escaláveis.
           </p>
         </div>
-        <div className="w-full md:w-1/2 translate-x-[1000px] about ">
+        <div className="w-full md:w-1/2 opacity-0 translate-x-[1000px] about ">
           <h2 className="text-center text-2xl font-semibold mb-4">Stacks</h2>
           <div className="flex flex-wrap  gap-2">
             <StackCard name="HTML">

@@ -3,6 +3,7 @@ import { NavLink } from "./navLink";
 import { CiMenuFries } from "react-icons/ci";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import { NavLinkHamburguerMenu } from "./navLinkHamburguerMenu";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,8 +15,8 @@ export function Navbar() {
         <nav className="z-10 hidden md:block">
           <ul className="flex gap-6">
             <NavLink href="/#greeting" name="Sobre mim" />
-            <NavLink href="/" name="Projetos" />
-            <NavLink href="/" name="Contato" />
+            <NavLink href="/#projects" name="Projetos" />
+            <NavLink href="/#contact" name="Contato" />
           </ul>
         </nav>
         <button className="p-4 block md:hidden" onClick={() => setOpen(prevValue => !prevValue)}>
@@ -24,15 +25,9 @@ export function Navbar() {
         </button>
         <nav className={`w-full  absolute left-0 top-20 ${open ? 'block' : 'hidden'} block md:hidden`}>
           <ul className="w-full  bg-slate-950 text-center">
-            <li className="">
-              <a href="/" className="inline-block w-full p-4">Sobre mim</a>
-            </li>
-            <li className="">
-              <a href="/" className="inline-block w-full p-4">Projetos</a>
-            </li>
-            <li className="">
-              <a href="/" className="inline-block w-full p-4">Contato</a>
-            </li>
+            <NavLinkHamburguerMenu name="Sobre mim" href="/#greeting" setOpen={setOpen} />
+            <NavLinkHamburguerMenu name="Projetos" href="/#projects" setOpen={setOpen} />
+            <NavLinkHamburguerMenu name="Contato" href="/#contact" setOpen={setOpen} />
           </ul>
         </nav>
       </div>

@@ -13,8 +13,8 @@ export function Projects() {
       opacity: 1,
       scrollTrigger: {
         trigger: "#projects",
-        start: "top 500px",
-        end: "top 300px",
+        start: "top 700px",
+        end: "top 400px",
         markers: false,
         scrub: true,
 
@@ -27,14 +27,14 @@ export function Projects() {
   }, []);
   return (
     <Container>
-      <div className="min-h-[calc(100dvh-5rem)]  flex flex-col justify-center items-center gap-12 " id="projects-section">
+      <section className="min-h-[calc(100dvh-5rem)]  flex flex-col justify-center items-center gap-12 " id="projects-section">
         <h2 className="text-3xl font-bold">Projetos</h2>
         <div className="flex w-full flex-wrap justify-center items-center gap-4 max-w-[90%] mx-auto overflow-hidden" id="projects">
             <CardProject/>
             <CardProject/>
             
         </div>
-      </div>
+      </section>
     </Container>
   );
 }

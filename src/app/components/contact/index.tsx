@@ -8,14 +8,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export function Contact() {
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        gsap.to(".contact", {
+        gsap.to("#contact", {
             x: 0,
             opacity: 1,
             scrollTrigger: {
-                trigger: ".contact",
+                trigger: "#contact",
                 start: "top 700px",
                 end: "top 300px",
-                markers: true,
+                markers: false,
                 scrub: true,
             },
         });
@@ -23,7 +23,7 @@ export function Contact() {
     return(
         <Container>
             <div className="overflow-hidden">
-                <div className="min-h-[calc(100dvh-5rem)] flex flex-col justify-center items-center gap-12 contact translate-x-[-1000px]">
+                <div className="min-h-[calc(100dvh-5rem)] flex flex-col justify-center items-center gap-12 opacity-0 translate-x-[-1000px]" id="contact">
                     <h2 className="text-3xl font-bold">Entre em Contato!</h2>
                     <div className="flex gap-4">
                         <ButtonContact contact="Whatsapp" />
