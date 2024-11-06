@@ -26,9 +26,10 @@ export function Contact() {
                 <div className="min-h-[calc(100dvh-5rem)] flex flex-col justify-center items-center gap-12 opacity-0 translate-x-[-1000px]" id="contact">
                     <h2 className="text-3xl font-bold">Entre em Contato!</h2>
                     <div className="flex gap-4">
-                        <ButtonContact contact="Whatsapp" />
-                        <ButtonContact contact="Email" />
-                        <ButtonContact contact="Linkedin" />
+                        <ButtonContact contact="Whatsapp" href="https://wa.me/5533984113134" />
+                        <ButtonContact contact="Email" href="mailto:seuemail@exemplo.com
+" />
+                        <ButtonContact contact="Linkedin" href='https://www.linkedin.com/in/gustavo-esteves-guedes' />
                     </div>
                 </div>
             </div>

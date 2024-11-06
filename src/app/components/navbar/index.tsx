@@ -7,7 +7,6 @@ import { NavLinkHamburguerMenu } from "./navLinkHamburguerMenu";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  console.log(open)
   return (
     <div className='sticky top-0 z-10 backdrop-blur-sm  bg-white/5 h-20 w-full '>
       <div className=" max-w-7xl w-full  pl-4 flex items-center justify-between h-full mx-auto">
@@ -15,7 +14,7 @@ export function Navbar() {
         <nav className="z-10 hidden md:block">
           <ul className="flex gap-6">
             <NavLink href="/#greeting" name="Sobre mim" />
-            <NavLink href="/#projects" name="Projetos" />
+            <NavLink href="/#projects-section" name="Projetos" />
             <NavLink href="/#contact" name="Contato" />
           </ul>
         </nav>
@@ -26,7 +25,7 @@ export function Navbar() {
         <nav className={`w-full  absolute left-0 top-20 ${open ? 'block' : 'hidden'} block md:hidden`}>
           <ul className="w-full  bg-slate-950 text-center">
             <NavLinkHamburguerMenu name="Sobre mim" href="/#greeting" setOpen={setOpen} />
-            <NavLinkHamburguerMenu name="Projetos" href="/#projects" setOpen={setOpen} />
+            <NavLinkHamburguerMenu name="Projetos" href="/#projects-section" setOpen={setOpen} />
             <NavLinkHamburguerMenu name="Contato" href="/#contact" setOpen={setOpen} />
           </ul>
         </nav>
