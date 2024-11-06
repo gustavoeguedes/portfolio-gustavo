@@ -27,7 +27,7 @@ export function Contact() {
                     <h2 className="text-3xl font-bold">Entre em Contato!</h2>
                     <div className="flex gap-4">
                         <ButtonContact contact="Whatsapp" href="https://wa.me/5533984113134" />
-                        <ButtonContact contact="Email" href="mailto:seuemail@exemplo.com
+                        <ButtonContact contact="Email" href="mailto:gustavoestevesguedes12@gmail.com
 " />
                         <ButtonContact contact="Linkedin" href='https://www.linkedin.com/in/gustavo-esteves-guedes' />
                     </div>
