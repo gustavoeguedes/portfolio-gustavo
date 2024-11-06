@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import {JetBrains_Mono} from "next/font/google"
-import { Analytics } from "@vercel/analytics/react";
+import { GoogleTagManager } from "@next/third-parties/google";
+
 
 const mainFontFamily = JetBrains_Mono({
   weight: ['400', '500', '600', '700'],
@@ -29,7 +30,7 @@ export default function RootLayout({
         className={`bg-slate-950 text-slate-50 ${mainFontFamily.className}`}
       >
         {children}
-        <Analytics/>
+        <GoogleTagManager gtmId="G-Z358PB3NZT"/>
       </body>
     </html>
   );
