@@ -5,7 +5,7 @@ import { GrDeploy } from "react-icons/gr";
 
 export function CardProject({name, description, img, code, deploy}: {name : string, description : string ,img : StaticImageData, code :string, deploy : string} ) {
     return(
-        <div className="flex flex-col grow-[1] shrink-[1] basis-96 items-center border p-4 rounded-md gap-2 opacity-0 translate-x-[-1000px] even:translate-x-[1000px]" id="project-card">
+        <div className="flex flex-col flex-1 min-h-96 basis-96 items-center justify-center border p-4 rounded-md gap-2 opacity-0 translate-x-[-1000px] even:translate-x-[1000px]" id="project-card">
           <div className=" ">
             <Image
             src={img}
@@ -21,8 +21,8 @@ export function CardProject({name, description, img, code, deploy}: {name : stri
           <h3 className="font-semibold text-2xl">{name}</h3>
           <p className="">{description}</p>
           <div className="flex justify-around w-full">
-            <a href={deploy} target="_blank" className="border py-4 px-6 group">Deploy <GrDeploy size={24} color="white" className="inline transition-all group-hover:translate-x-2"/></a>
-            <a href={code} target="_blank" className="border py-4 px-6 group">Código <FaCode size={24} color="white" className="inline transition-all group-hover:translate-x-2" /></a>
+            <a href={deploy} target="_blank" className="border py-4 px-6 group" rel="noopener noreferrer">Deploy <GrDeploy size={24} color="white" className="inline transition-all group-hover:translate-x-2"/></a>
+            <a href={code} target="_blank" className="border py-4 px-6 group" rel="noopener noreferrer">Código <FaCode size={24} color="white" className="inline transition-all group-hover:translate-x-2" /></a>
           </div>
         </div>
     )

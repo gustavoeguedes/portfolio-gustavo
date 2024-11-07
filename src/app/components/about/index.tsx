@@ -51,7 +51,7 @@ export function About() {
         <div className="w-full md:w-1/2 opacity-0 translate-x-[-1000px] about">
           <h2 className="text-center text-2xl font-semibold mb-4">Sobre mim</h2>
           <p>
-            Sou estagiário na <a href="https://rkms.com.br/" className="underline">RKM Sistemas</a>, com 24 anos e atualmente cursando o
+            Sou estagiário na <a href="https://rkms.com.br/" className="underline" target="_blank" rel="noopener noreferrer">RKM Sistemas</a>, com 24 anos e atualmente cursando o
             4º período de Sistemas de Informação. Estou me especializando em
             tecnologias modernas de desenvolvimento, como Node.js, Express,
             Prisma, React.js e Next.js, com foco em criar soluções eficientes e
